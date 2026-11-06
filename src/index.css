@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #9E0620;
+  --color-secondary: #FCB145;
+  --font-primary: "Rubik", sans-serif;
+  --animate-swipeDown: swipeDown .5s ease-in-out forwards;
+  --animate-swipeUp: swipeUp 1s ease-in-out forwards;
+  --animate-shake: shake .5s ease-in-out forwards;
+
+  @keyframes swipeDown{
+    from {
+      transform: translateY(0%);
+    }
+    to {
+      transform: translateY(5%);
+    }
+  }
+
+  @keyframes swipeUp {
+    from {
+      transform: translateY(25%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes shake {
+    0%{
+      transform: translateX(10px);
+    }
+    25% {
+      transform: translateX(-10px);
+    }
+    50%{
+      transform: translateX(10px);
+    }
+    75%{
+      transform: translateX(-10px);
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+}
